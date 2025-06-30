@@ -39,6 +39,11 @@ android {
     buildFeatures {
         compose = true
     }
+    packagingOptions {
+        resources {
+            excludes += "META-INF/gradle/incremental.annotation.processors"
+        }
+    }
 }
 
 dependencies {
@@ -73,7 +78,6 @@ dependencies {
     implementation(libs.dagger.compiler)
     ksp(libs.dagger.compiler)
 
-    // --------------------------
     // TensorFlow
     implementation (libs.tensorflow.lite)
 
@@ -102,5 +106,8 @@ dependencies {
 
     implementation (libs.androidx.runtime.livedata)
 
+    implementation ("com.google.mediapipe:tasks-vision:0.10.14")
+
+    implementation ("androidx.lifecycle:lifecycle-service:2.7.0")
 
 }
