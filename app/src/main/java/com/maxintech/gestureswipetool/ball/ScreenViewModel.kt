@@ -4,14 +4,13 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.media.AudioManager
-import android.view.WindowManager
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.maxintech.gestureswipetool.gesture.HandGestureType
 import com.maxintech.gestureswipetool.gesture.mapGestureToAction
 import kotlinx.coroutines.launch
 
-class BallViewModel(app: Application) : AndroidViewModel(app) {
+class ScreenViewModel(app: Application) : AndroidViewModel(app) {
 
     private val context = getApplication<Application>().applicationContext
 

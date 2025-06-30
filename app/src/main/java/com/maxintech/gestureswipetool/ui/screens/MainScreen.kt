@@ -5,7 +5,6 @@ import android.app.Activity
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.camera.core.ImageAnalysis
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -24,7 +23,7 @@ import com.maxintech.gestureswipetool.camera.CameraPreview
 import com.maxintech.gestureswipetool.camera.CameraViewModel
 import com.maxintech.gestureswipetool.gesture.HandGestureType
 import com.maxintech.gestureswipetool.gesture.HandLandmarkerHelper
-import com.maxintech.gestureswipetool.viewmodel.BallViewModel
+import com.maxintech.gestureswipetool.viewmodel.ScreenViewModel
 import com.maxintech.gestureswipetool.viewmodel.SwipeGestureViewModel
 import kotlinx.coroutines.delay
 
@@ -32,7 +31,7 @@ import kotlinx.coroutines.delay
 fun MainScreen(
     cameraViewModel: CameraViewModel = hiltViewModel(),
     gestureViewModel: SwipeGestureViewModel = hiltViewModel(),
-    ballViewModel: BallViewModel = viewModel()
+    ballViewModel: ScreenViewModel = viewModel()
 ) {
     val context = LocalContext.current
     val activity = context as? Activity
