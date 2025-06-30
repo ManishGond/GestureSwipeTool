@@ -24,7 +24,7 @@ class GestureDetectionService : LifecycleService() {
         super.onCreate()
         startForegroundService()
         handLandmarkerHelper = HandLandmarkerHelper(this)
-        gestureProcessor = HandGestureProcessor(GestureInterpreter())
+        gestureProcessor = HandGestureProcessor()
     }
 
     private fun startForegroundService() {
