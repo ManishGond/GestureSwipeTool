@@ -58,11 +58,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // CameraX
-    implementation(libs.androidx.camera.camera2)
-    implementation(libs.androidx.camera.lifecycle)
-    implementation(libs.androidx.camera.view)
-
     // Dependency Injection with HILT
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
@@ -74,14 +69,38 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.compose)
 
     // Added Dagger Hilt Compiler
+    implementation (libs.androidx.hilt.navigation.compose)
     implementation(libs.dagger.compiler)
     ksp(libs.dagger.compiler)
 
-    // MediaPipe / TensorFlow Lite
-    implementation(libs.tensorflow.lite.vx)
-    implementation(libs.mediapipe.hands)
+    // --------------------------
+    // TensorFlow
+    implementation (libs.tensorflow.lite)
 
-    // DataStore
-    implementation(libs.androidx.datastore.preferences)
+    // CameraX
+    implementation (libs.androidx.camera.camera2)
+    implementation (libs.androidx.camera.lifecycle)
+    implementation (libs.androidx.camera.view)
+
+    // Lifecycle + ViewModel
+    implementation (libs.androidx.lifecycle.runtime.ktx.v270)
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
+    // Dependency Injection with HILT
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    // Hilt with Jetpack Compose
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation (libs.kotlinx.coroutines.android)
+    // Added Dagger Hilt Compiler
+    implementation(libs.dagger.compiler)
+    ksp(libs.dagger.compiler)
+
+    implementation (libs.androidx.runtime.livedata)
+
 
 }
